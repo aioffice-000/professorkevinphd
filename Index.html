@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Kevin | Graduate Thesis & Dissertation Consulting</title>
+    <style>
+        :root {
+            --navy: #1a3a52;
+            --charcoal: #2d2d2d;
+            --slate: #475569;
+            --gold: #b8860b;
+            --cream: #f5f3f0;
+            --ivory: #faf9f7;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            color: var(--charcoal);
+            background-color: var(--ivory);
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--slate) 100%);
+            color: var(--white);
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        header h1 {
+            font-family: Georgia, serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: var(--cream);
+            font-weight: 300;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--white);
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 0 1.5rem;
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 1rem;
+            text-align: center;
+            background: var(--white);
+        }
+
+        .hero h2 {
+            font-family: Georgia, serif;
+            font-size: 2rem;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            color: var(--navy);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--slate);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--gold);
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+            border: 2px solid var(--gold);
+        }
+
+        .cta-button:hover {
+            background: var(--navy);
+            color: var(--gold);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            color: var(--navy);
+            border: 2px solid var(--navy);
+        }
+
+        .cta-button.secondary:hover {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 4rem 1rem;
+            background: var(--cream);
+        }
+
+        .services h2 {
+            font-family: Georgia, serif;
+            font-size: 2rem;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            color: var(--navy);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-left: 4px solid var(--gold);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .service-card h3 {
+            font-family: Georgia, serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: var(--navy);
+            margin-bottom: 0.75rem;
+        }
+
+        .service-card p {
+            color: var(--slate);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        /* Consultation Section */
+        .consultation {
+            padding: 4rem 1rem;
+            background: var(--white);
+            text-align: center;
+        }
+
+        .consultation h2 {
+            font-family: Georgia, serif;
+            font-size: 2rem;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+
+        .consultation p {
+            font-size: 1rem;
+            color: var(--slate);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* About Section */
+        .about {
+            padding: 4rem 1rem;
+            background: var(--cream);
+        }
+
+        .about h2 {
+            font-family: Georgia, serif;
+            font-size: 2rem;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content {
+            max-width: 700px;
+            color: var(--slate);
+            line-height: 1.8;
+        }
+
+        .about-content p {
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy);
+            color: var(--cream);
+            padding: 2rem 1rem;
+            text-align: center;
+            border-top: 3px solid var(--gold);
+        }
+
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            display: inline-block;
+            margin: 0 1rem;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+
+            .services h2,
+            .consultation h2,
+            .about h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Dr. Kevin</h1>
+        <p>Graduate Thesis & Dissertation Consulting</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#consultation">Free Consultation</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#resources">Resources</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <h2>Expert Guidance for Your Graduate Journey</h2>
+            <p>Navigating thesis, dissertation, and graduate school challenges requires clarity, strategy, and academic rigor. Get expert consulting tailored to your specific needs.</p>
+            <a href="https://calendar.app.google/ZK2ExqE5XTcRYMR79" class="cta-button">Book Your Free 15-Min Consultation</a>
+            <a href="https://linktr.ee/professorkevinphd" class="cta-button secondary">View All Resources</a>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Services & Solutions</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>Thesis & Dissertation Guidance</h3>
+                    <p>Strategic frameworks, timeline management, and chapter-by-chapter support to move your research forward with confidence and clarity.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Document Review & Feedback</h3>
+                    <p>Professional review of your thesis, dissertation chapters, or application materials with actionable feedback aligned to academic standards.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Graduate Application Guidance</h3>
+                    <p>Navigate admissions strategy, personal statement development, and positioning yourself as a strong candidate for your target programs.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Templates & Resources</h3>
+                    <p>Ready-to-use workbooks, templates, and frameworks that accelerate your progress and provide structure when you need it most.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Career Transition Planning</h3>
+                    <p>Strategic guidance for navigating the transition from academics to professional life with confidence and clear direction.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Custom Consulting</h3>
+                    <p>Tailored one-on-one consulting for your unique challenges, whether methodological, strategic, or developmental.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation Section -->
+    <section class="consultation" id="consultation">
+        <div class="container">
+            <h2>Start with a Free Consultation</h2>
+            <p>Not sure where to begin? Book a free 15-minute consultation to discuss your situation, explore options, and identify the right support for your needs.</p>
+            <a href="https://calendar.app.google/ZK2ExqE5XTcRYMR79" class="cta-button">Schedule Your Consultation</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About Dr. Kevin</h2>
+            <div class="about-content">
+                <p>With deep expertise in graduate education, thesis development, and career strategy, Dr. Kevin provides evidence-based consulting grounded in academic rigor and professional reality.</p>
+                <p>Dr. Kevin works with graduate students, recent graduates, and career-transitioners to clarify strategy, overcome obstacles, and achieve their academic and professional goals with confidence.</p>
+                <p>Every consultation and resource is designed with one goal: equipping you with the clarity, frameworks, and support needed to move forward.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="https://linktr.ee/professorkevinphd">Resources & Products</a>
+            <a href="https://calendar.app.google/ZK2ExqE5XTcRYMR79">Book Consultation</a>
+        </div>
+        <p>&copy; 2026 @ProfessorKevinPhD. All rights reserved.</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--slate);">Serving graduate students and career professionals with expertise and integrity.</p>
+    </footer>
+</body>
+</html>
