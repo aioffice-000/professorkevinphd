@@ -85,9 +85,29 @@
 
         /* Hero Section */
         .hero {
-            padding: 4rem 1rem;
-            text-align: center;
+            padding: 5rem 1rem;
             background: var(--white);
+        }
+
+        .hero-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-copy {
+            text-align: left;
+        }
+
+        .hero-copy::before {
+            content: "THESIS • DISSERTATION • CAREER STRATEGY";
+            display: block;
+            margin-bottom: 1rem;
+            color: var(--gold);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
         }
 
         .hero h2 {
@@ -105,8 +125,48 @@
             color: var(--slate);
             margin-bottom: 2rem;
             max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+        }
+
+        .hero-visual {
+            min-height: 360px;
+            overflow: hidden;
+            border-radius: 4px;
+            background: var(--navy);
+            box-shadow: 18px 18px 0 var(--cream);
+        }
+
+        .hero-visual img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            min-height: 360px;
+            object-fit: cover;
+        }
+
+        .image-band {
+            display: grid;
+            grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+            gap: 2.5rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .image-band img {
+            display: block;
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .image-band-copy {
+            color: var(--slate);
+            max-width: 620px;
+        }
+
+        .image-band-copy p {
+            margin-top: 0.75rem;
+            font-size: 1rem;
         }
 
         .cta-button {
@@ -370,6 +430,33 @@
                 font-size: 1.5rem;
             }
 
+            .hero-layout,
+            .image-band {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero {
+                padding: 3.5rem 1rem;
+            }
+
+            .hero-copy {
+                text-align: center;
+            }
+
+            .hero-copy::before {
+                font-size: 0.65rem;
+            }
+
+            .hero-visual {
+                min-height: 260px;
+                box-shadow: 10px 10px 0 var(--cream);
+            }
+
+            .hero-visual img {
+                min-height: 260px;
+            }
+
             .services h2,
             .consultation h2,
             .about h2 {
@@ -396,10 +483,17 @@
     <!-- Hero Section -->
     <div class="hero">
         <div class="container">
-            <h2>Expert Guidance for Your Graduate Journey</h2>
-            <p>Navigating thesis, dissertation, and graduate school challenges requires clarity, strategy, and academic rigor. Get expert consulting tailored to your specific needs.</p>
-            <a href="https://calendar.app.google/ZK2ExqE5XTcRYMR79" class="cta-button">Book Your Free 15-Min Consultation</a>
-            <a href="https://linktr.ee/professorkevinphd" class="cta-button secondary">View All Resources</a>
+            <div class="hero-layout">
+                <div class="hero-copy">
+                    <h2>Expert Guidance for Your Graduate Journey</h2>
+                    <p>Navigating thesis, dissertation, and graduate school challenges requires clarity, strategy, and academic rigor. Get expert consulting tailored to your specific needs.</p>
+                    <a href="https://calendar.app.google/ZK2ExqE5XTcRYMR79" class="cta-button">Book Your Free 15-Min Consultation</a>
+                    <a href="https://linktr.ee/professorkevinphd" class="cta-button secondary">View All Resources</a>
+                </div>
+                <div class="hero-visual">
+                    <img src="https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=1200&q=85" alt="Open notebook and research materials on a desk">
+                </div>
+            </div>
         </div>
     </div>
 
@@ -407,6 +501,13 @@
     <section class="services" id="services">
         <div class="container">
             <h2>Services & Solutions</h2>
+            <div class="image-band">
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=85" alt="Graduate students collaborating around a table">
+                <div class="image-band-copy">
+                    <h3>Build momentum with a clear plan.</h3>
+                    <p>Whether you are defining a research question, shaping a chapter, or preparing for what comes next, practical structure turns an overwhelming project into a series of achievable steps.</p>
+                </div>
+            </div>
             <div class="service-grid">
                 <div class="service-card">
                     <h3>Thesis & Dissertation Guidance</h3>
