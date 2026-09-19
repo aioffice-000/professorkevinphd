@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="refresh" content="0; url=https://professorkevinphd.com/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting...</title>
+  <script>
+    (function() {
+      const canonical = 'https://professorkevinphd.com';
+      const current = window.location.href;
+      const url = new URL(current);
+      if (url.hostname === 'www.professorkevinphd.com' || url.hostname === 'professorkevinphd.com') {
+        const target = canonical + url.pathname + url.search + url.hash;
+        if (url.origin !== canonical) {
+          window.location.replace(target);
+        }
+      } else if (url.hostname !== 'professorkevinphd.com') {
+        window.location.replace(canonical + url.pathname + url.search + url.hash);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting to the canonical website...</p>
+</body>
+</html>

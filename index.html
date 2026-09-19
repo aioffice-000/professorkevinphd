@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Kevin | Graduate Thesis & Dissertation Consulting</title>
+    <title>Professor Kevin, Ph.D. | Graduate Thesis & Dissertation Consulting</title>
     <style>
         :root {
             --navy: #1a3a52;
@@ -237,11 +237,83 @@
             margin-bottom: 1rem;
         }
 
+        .policy-list {
+            margin-top: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem 1.25rem;
+        }
+
+        .policy-list a {
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .policy-list a:hover {
+            color: var(--gold);
+            text-decoration: underline;
+        }
+
+        .cookie-banner {
+            position: fixed;
+            left: 1rem;
+            right: 1rem;
+            bottom: 1rem;
+            background: rgba(26, 58, 82, 0.96);
+            color: var(--white);
+            border: 1px solid rgba(184, 134, 11, 0.6);
+            border-radius: 10px;
+            padding: 1rem 1.25rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+            z-index: 200;
+        }
+
+        .cookie-banner p {
+            margin: 0;
+            font-size: 0.95rem;
+            text-align: center;
+        }
+
+        .cookie-banner a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .cookie-actions {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .cookie-btn {
+            border: none;
+            border-radius: 4px;
+            padding: 0.6rem 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        .cookie-btn.secondary {
+            background: transparent;
+            border: 1px solid var(--white);
+            color: var(--white);
+        }
+
         /* Footer */
         footer {
             background: var(--navy);
             color: var(--cream);
-            padding: 2rem 1rem;
+            padding: 2rem 1rem 3rem;
             text-align: center;
             border-top: 3px solid var(--gold);
         }
@@ -257,6 +329,24 @@
 
         .footer-links {
             margin-bottom: 1rem;
+        }
+
+        .footer-legal {
+            margin-top: 1.25rem;
+            text-align: center;
+            font-size: 14px;
+            color: var(--white);
+            line-height: 1.8;
+        }
+
+        .footer-legal a {
+            color: var(--white);
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .footer-legal a:hover {
+            text-decoration: underline;
         }
 
         .footer-links a {
@@ -291,13 +381,13 @@
 <body>
     <!-- Header -->
     <header>
-        <h1>Dr. Kevin</h1>
+        <h1>Professor Kevin</h1>
         <p>Graduate Thesis & Dissertation Consulting</p>
     </header>
 
     <!-- Navigation -->
     <nav>
-        <a href="#consultation">Free Consultation</a>
+        <a href="#consultation">Consultation</a>
         <a href="#services">Services</a>
         <a href="#about">About</a>
         <a href="#resources">Resources</a>
@@ -358,23 +448,59 @@
     <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
-            <h2>About Dr. Kevin</h2>
+            <h2>About Dr. Kevin Roux, Ph.D.</h2>
             <div class="about-content">
                 <p>With deep expertise in graduate education, thesis development, and career strategy, Dr. Kevin provides evidence-based consulting grounded in academic rigor and professional reality.</p>
-                <p>Dr. Kevin works with graduate students, recent graduates, and career-transitioners to clarify strategy, overcome obstacles, and achieve their academic and professional goals with confidence.</p>
+                <p>Professor Kevin works with graduate students, recent graduates, and career-transitioners to clarify strategy, overcome obstacles, and achieve their academic and professional goals with confidence.</p>
                 <p>Every consultation and resource is designed with one goal: equipping you with the clarity, frameworks, and support needed to move forward.</p>
             </div>
         </div>
     </section>
 
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie consent message">
+        <p>We use cookies to improve your experience. Review our <a href="cookies-policy.html">Cookies Policy</a>.</p>
+        <div class="cookie-actions">
+            <button class="cookie-btn" id="acceptCookies" type="button">Accept</button>
+            <button class="cookie-btn secondary" id="declineCookies" type="button">Decline</button>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
         <div class="footer-links">
             <a href="https://linktr.ee/professorkevinphd">Resources & Products</a>
-            <a href="https://calendar.app.google/ZK2ExqE5XTcRYMR79">Book Consultation</a>
+            <a href="https://calendar.app.google/ZK2ExqE5XTcRYMR79">Book a Consultation</a>
+        </div>
+        <p><a href="mailto:hello@professorkevinphd.com">hello@professorkevinphd.com</a></p>
+        <p><a href="https://www.professorkevinphd.com" target="_blank" rel="noopener noreferrer">www.professorkevinphd.com</a></p>
+        <div class="footer-legal" aria-label="Legal policies footer links">
+            <a href="privacy-policy.html">Privacy Policy</a> | 
+            <a href="terms-of-service.html">Terms of Service</a> | 
+            <a href="cookies-policy.html">Cookies Policy</a> | 
+            <a href="accessibility-statement.html">Accessibility</a> | 
+            <a href="dmca-policy.html">DMCA</a> | 
+            <a href="refund-policy.html">Refund Policy</a>
         </div>
         <p>&copy; 2026 @ProfessorKevinPhD. All rights reserved.</p>
-        <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--slate);">Serving graduate students and career professionals with expertise and integrity.</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--cream);">Serving graduate students and career professionals with expertise and integrity.</p>
     </footer>
+
+    <script>
+        const cookieBanner = document.getElementById('cookieBanner');
+        const acceptCookies = document.getElementById('acceptCookies');
+        const declineCookies = document.getElementById('declineCookies');
+
+        const setCookieConsent = (choice) => {
+            localStorage.setItem('cookieConsent', choice);
+            cookieBanner.style.display = 'none';
+        };
+
+        if (localStorage.getItem('cookieConsent')) {
+            cookieBanner.style.display = 'none';
+        }
+
+        acceptCookies.addEventListener('click', () => setCookieConsent('accepted'));
+        declineCookies.addEventListener('click', () => setCookieConsent('declined'));
+    </script>
 </body>
 </html>
