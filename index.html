@@ -415,6 +415,33 @@
             font-size: 0.9rem;
         }
 
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .social-links a:hover {
+            color: var(--gold);
+        }
+
+        .social-links svg {
+            width: 1.35rem;
+            height: 1.35rem;
+            fill: currentColor;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             header h1 {
@@ -574,6 +601,16 @@
         </div>
         <p><a href="mailto:hello@professorkevinphd.com">hello@professorkevinphd.com</a></p>
         <p><a href="https://www.professorkevinphd.com" target="_blank" rel="noopener noreferrer">www.professorkevinphd.com</a></p>
+        <div class="social-links" aria-label="Social media links">
+            <a href="https://www.instagram.com/professorkevinphd/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @professorkevinphd">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.25-3.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z"/></svg>
+                <span>@professorkevinphd</span>
+            </a>
+            <a href="https://www.tiktok.com/@professorkevinphd_" target="_blank" rel="noopener noreferrer" aria-label="TikTok @professorkevinphd_">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16.6 2h3.05c.25 1.55 1.12 2.9 2.35 3.78v3.1a8.9 8.9 0 0 1-5.4-1.82v7.1A5.84 5.84 0 1 1 11.55 8.4v3.25a2.65 2.65 0 1 0 1.85 2.54V2h3.2Z"/></svg>
+                <span>@professorkevinphd_</span>
+            </a>
+        </div>
         <div class="footer-legal" aria-label="Legal policies footer links">
             <a href="privacy-policy.html">Privacy Policy</a> | 
             <a href="terms-of-service.html">Terms of Service</a> | 
